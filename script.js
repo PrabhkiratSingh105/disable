@@ -1,4 +1,4 @@
-function submit() {
+function submit(){
 	let un = document.getElementById("un").value;
 	let pass = document.getElementById("pass").value;
 	let cpass = document.getElementById("cpass").value;
@@ -14,10 +14,10 @@ function submit() {
 		}
 		else {
 			if (localStorage.getItem("username") == null) {
-				open("files.html");
 				localStorage.setItem("password", pass);
 				localStorage.setItem("username", un);
 				alert("Your account has been created");
+				window.open("files.html","_self");
 			}
 			else {
 				alert("You already have account");
@@ -35,11 +35,11 @@ function login() {
 	let oopass = localStorage.getItem("password");
 	if (un == lc) {
 		if (opass == oopass) {
-			open("files.html");
-			alert("successfully logedin")
+			alert("successfully logedin");
+			window.open("files.html","_self");
 		}
 		else {
-			alert("Incorrect password")
+			alert("Incorrect password");
 		}
 	}
 	else {
@@ -138,4 +138,12 @@ function ra() {
 	else {
 		alert("incorrect username")
 	}
+}
+lc = localStorage.getItem("sl");
+if(lc == "true"){
+	window.open("files.html","_self");
+}
+let ls = localStorage.getItem("Blocked");
+if(ls == "true"){
+	window.open('pages/blocked.html','_self');
 }

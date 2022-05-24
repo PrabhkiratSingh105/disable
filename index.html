@@ -1,2 +1,120 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Document</title><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4540405112656122"
-     crossorigin="anonymous"></script></head><body><style>html, body, iframe { height: 100%; width: 100%; border: 0; overflow: hidden; margin: 0;}</style><iframe src="https://codingbyprabhkirat-tech.storytime.repl.co"></body></html>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Login\Signup</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="bootstrap.css">
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4540405112656122"
+     crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <style>
+    body {
+      margin: 1%;
+      background-image: url("images/login-signup-background-image.jpg");
+			overflow: hidden;
+    }
+    .su {
+      width: 370px;
+      background-color: #C0C0C0;
+      border-radius: 5%;
+      position: absolute;
+      right: 1%;
+      border: blue dotted;
+    }
+    #li {
+      float: right;
+      position: absolute;
+      top: 380px;
+      right: 1%;
+    }
+    #su {
+      float: right;
+			top: 1%;
+    }
+    #cp {
+      float: left;
+      position: absolute;
+      left: 1%;
+      top: 1%;
+    }
+  </style>
+  <div class="su" id="su">
+    <h1>
+      <center>Sign Up</center>
+    </h1>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Username</label>
+      <input type="email" class="form-control" id="un" aria-describedby="emailHelp">
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="pass">
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Repeat Password</label>
+      <input type="password" class="form-control" id="cpass">
+    </div>
+		
+    <center><button type="submit" class="btn btn-primary" onclick="submit()">Sign up</button>
+    </center>
+  </div><br>
+  <div class="su" id="cp">
+    <h1>
+      <center>Change Password</center>
+    </h1>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Username</label>
+      <input type="email" class="form-control" id="cpun" aria-describedby="emailHelp">
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Current Password</label>
+      <input type="password" class="form-control" id="cpcp">
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">New Password</label>
+      <input type="password" class="form-control" id="cpnp">
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Repeat Password</label>
+      <input type="password" class="form-control" id="cprp">
+    </div>
+
+
+    <center><button type="submit" class="btn btn-primary" onclick="cp()">Change password</button><br>  <button type="submit"
+        class="btn btn-primary" onclick="cu()">Change username?</button> <button type="submit" class="btn btn-primary"
+        onclick="ra()">Reset account?</button>
+    </center>
+  </div><br>
+
+  <div class="su" id="li">
+    <h1>
+      <center>Log in</center>
+    </h1>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Username</label>
+      <input type="email" class="form-control" id="cusername" aria-describedby="emailHelp">
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="opass">
+    </div>
+		
+    <center><button class="btn btn-primary" id="login" onclick="login()">Log in</button> <button class="btn btn-primary" id="Ak" onclick="akey()">Advanced Key</button>
+    </center>
+  </div>
+	<br><br><br><br><br><br><a href="files.html"><button id="buttt"></button></a>
+  <script src="script.js"></script>
+</body>
+
+</html>
