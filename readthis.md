@@ -8,7 +8,7 @@
 
 I am perfect in each of my languages i will make your site:-
 
-- Ligtest
+- Lightest
 - Fastest
 - Secured
 - Animated
