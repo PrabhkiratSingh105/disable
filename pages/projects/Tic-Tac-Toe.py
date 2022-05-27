@@ -62,6 +62,10 @@ while("0" == "0"):
         print(turn + " won the match")
     if seven == eight == nine:
         print(turn + " won the match")
+    if one == five == nine:
+        print(turn + " won the match")
+    if three == five == seven:
+        print(turn + " won the match")
     if turn == "0":
         turn = "*"    
     elif turn == "*":
