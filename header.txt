@@ -34,7 +34,10 @@
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#" onclick="block()">Block</a>
-						</li>						
+						</li>				
+						<li class="nav-item">
+							<a class="nav-link" href="pages/projects.html">Projects</a>
+						</li		
 					</ul>
 				</div>
 			</center>
