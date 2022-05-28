@@ -15,9 +15,9 @@ print("|" + "4" + "|" + "5" + "|" + "6" + "|")
 print("_______")
 print("|" + "7" + "|" + "8" + "|" + "9" + "|")
 print()
-
+gameover = "false"
 turn = "0"
-while("0" == "0"):
+while(gameover == "false"):
     if turn == "0":
         print("Its the turn of 0")
         turn = "0"
@@ -52,21 +52,34 @@ while("0" == "0"):
     print()
     if one == two == three:
         print(turn + " won the match")
+        gameover = "true"
     if one == four == seven:
         print(turn + " won the match")
+        gameover = "true"
     if two == five == eight:
         print(turn + " won the match")
+        gameover = "true"
     if three == six == nine:
         print(turn + " won the match")
+        gameover = "true"
     if four == five == six:
         print(turn + " won the match")
+        gameover = "true"
     if seven == eight == nine:
         print(turn + " won the match")
+        gameover = "true"
     if one == five == nine:
         print(turn + " won the match")
+        gameover = "true"
     if three == five == seven:
         print(turn + " won the match")
-    if turn == "0":
-        turn = "*"    
-    elif turn == "*":
-        turn = "0"
+        gameover = "true"
+    if gameover == "true":
+        print()
+    else:
+        if turn == "0":
+            turn = "*"
+        elif turn == "*":
+            turn = "0"
+else:
+    print("Your game is over")
