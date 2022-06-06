@@ -86,7 +86,7 @@ function submit(){
         var correct_wrong = document.getElementById("correct_wrong")
         score = 0
         localStorage.setItem("score", score)
-        correct_wrong_answer = localStorage.getItem("correct_answer")
+        correct_wrong_answer = sessionStorage.getItem("correct_answer")
         correct_wrong_answer = parseInt(correct_wrong_answer)
         correct_wrong.innerHTML = "Wrong😔😔 " + correct_wrong_answer
         score_div_set = document.getElementById("score")
