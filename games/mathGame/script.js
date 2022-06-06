@@ -4,7 +4,7 @@ var ep = localStorage.getItem("ep")
 var high_score = localStorage.getItem("high_score")
 var score = document.getElementById("score")
 var score_local = localStorage.getItem("score")
-if(score_local == "NaN"){
+if(score_local == "NaN" || score_local == null){
     score_local = "0"
     localStorage.setItem("score", "0")
 }
