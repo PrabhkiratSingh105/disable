@@ -1,3 +1,7 @@
+var ep = localStorage.getItem("ep")
+if(ep == null || ep == "NaN"){
+	localStorage.setItem("ep", 0)
+}
 function submit(){
 	let un = document.getElementById("un").value;
 	let pass = document.getElementById("pass").value;
