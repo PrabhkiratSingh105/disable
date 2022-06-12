@@ -1,0 +1,53 @@
+#show{
+    margin: 20px;
+    color: azure;
+    font-size: 102px;
+    text-align: center;
+}
+body{
+    background-color: rgb(63, 60, 60);
+    overflow: hidden;
+    overflow-x: hidden;
+}
+.tp{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    height: 50px;
+    font-size: 50px;
+}
+#check{
+    margin-top: 1%;
+    background-color: blue;
+    color: antiquewhite;
+    width: 100px;
+    height: 50px;
+    font-size: 32px;
+    border: 2px whitesmoke;
+}
+#score{
+    position: relative;
+    float: right;
+    text-align: right;
+    font-size: 50px;
+    color: red;
+    bottom: 2px;
+    margin-top: 20%;
+}
+#high_score{
+    float: left;
+    text-align: left;
+    font-size: 50px;
+    color: red;
+    margin-top: 20%;
+}
+#correct_wrong{
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    color: red;
+    font-size: 50px;
+    margin: 2px;
+}
