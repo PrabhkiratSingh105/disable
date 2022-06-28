@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+        input[type=number] input[type=text]{
+          -moz-appearance: textfield;
+          width: 36.5vw;
+          height: 3vw;
+        }
+        button{
+          width: 5vw;
+          height: 3.5vw;
+        }
+        body{
+          vertical-align: middle;
+          margin-top: 25%;
+          background-color: cadetblue;
+        }
+        .na{
+          position: absolute;
+          top : 50%;
+          left: 50%;
+          -ms-transform: translate(-50%, -50%);
+          transform    : translate(-50%, -50%); 
+          background-color: aquamarine;
+          vertical-align: middle;
+          justify-content: center;
+          border-radius: 5%;
+          text-align: center;
+          border: 1px dotted black;
+          width: 30vw;
+          height: 18vw;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+</head>
+<body bgcolor="cadetblue">
+    <center>
+      <div class="na">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Name</label>
+          <input type="text" class="form-control" id="exampleInputEmail1 name" aria-describedby="emailHelp" placeholder="Enter your name" required>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">How many questions you want to attempt? </label>
+          <input type="number" class="form-control" id="exampleInputPassword1 num" placeholder="Questions">
+        </div>
+        <button onclick="localStorage.setItem('name', document.getElementById('name').value); localStorage.setItem('num', document.getElementById('num').value); open('index.html')" class="btn btn-primary">Play</button>
+      </div>
+    </center>
+</body>
+</html>

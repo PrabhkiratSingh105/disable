@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" conTent="IE=edge">
+    <meta name="viewport" conTent="width=device-width, initial-scale=1.0">
+    <title>Score</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="scored.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+  <center>
+    <div class="empty"></div>
+    <div id="header" class="header sticky">
+      <img class="image" onclick="clicked()" src="arrow.png" alt="back">
+      <button onclick="tableToCSV()">Download</button>
+    </div>
+    <table class="table table-striped" id="tblData">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Questions</th>
+          <th scope="col">Corrects</th>
+          <th scope="col">Filled</th>
+          <th scope="col">Timer</th>
+        </tr>
+        <tr id="One">
+          <th style="color: antiquewhite;" scope="row">1</th>
+          <td style="color: antiquewhite;" id="Question_One"></td>
+          <td style="color: antiquewhite;" id="Correct_One"></td>
+          <td style="color: antiquewhite;" id="Filled_One"></td>
+          <td style="color: antiquewhite;" id="Timer_One"></td>
+        </tr>
+        <tr id="Two">
+          <th style="color: antiquewhite;" scope="row">2</th>
+          <td style="color: antiquewhite;" id="Question_Two"></td>
+          <td style="color: antiquewhite;" id="Correct_Two"></td>
+          <td style="color: antiquewhite;" id="Filled_Two"></td>
+          <td style="color: antiquewhite;" id="Timer_Two"></td>
+        </tr>
+        <tr id="Three">
+          <th style="color: antiquewhite;" scope="row">3</th>
+          <td style="color: antiquewhite;" id="Question_Three"></td>
+          <td style="color: antiquewhite;" id="Correct_Three"></td>
+          <td style="color: antiquewhite;" id="Filled_Three"></td>
+          <td style="color: antiquewhite;" id="Timer_Three"></td>
+        </tr>
+        <tr id="Four">
+          <th style="color: antiquewhite;" scope="row">4</th>
+          <td style="color: antiquewhite;" id="Question_Four"></td>
+          <td style="color: antiquewhite;" id="Correct_Four"></td>
+          <td style="color: antiquewhite;" id="Filled_Four"></td>
+          <td style="color: antiquewhite;" id="Timer_Four"></td>
+        </tr>
+        <tr id="Five">
+          <th style="color: antiquewhite;" scope="row">5</th>
+          <td style="color: antiquewhite;" id="Question_Five"></td>
+          <td style="color: antiquewhite;" id="Correct_Five"></td>
+          <td style="color: antiquewhite;" id="Filled_Five"></td>
+          <td style="color: antiquewhite;" id="Timer_Five"></td>
+        </tr>
+        <tr id="Six">
+          <th style="color: antiquewhite;" scope="row">6</th>
+          <td style="color: antiquewhite;" id="Question_Six"></td>
+          <td style="color: antiquewhite;" id="Correct_Six"></td>
+          <td style="color: antiquewhite;" id="Filled_Six"></td>
+          <td style="color: antiquewhite;" id="Timer_Six"></td>
+        </tr>
+        <tr id="Seven">
+          <th style="color: antiquewhite;" scope="row">7</th>
+          <td style="color: antiquewhite;" id="Question_Seven"></td>
+          <td style="color: antiquewhite;" id="Correct_Seven"></td>
+          <td style="color: antiquewhite;" id="Filled_Seven"></td>
+          <td style="color: antiquewhite;" id="Timer_Seven"></td>
+        </tr>
+        <tr id="Eight">
+          <th style="color: antiquewhite;" scope="row">8</th>
+          <td style="color: antiquewhite;" id="Question_Eight"></td>
+          <td style="color: antiquewhite;" id="Correct_Eight"></td>
+          <td style="color: antiquewhite;" id="Filled_Eight"></td>
+          <td style="color: antiquewhite;" id="Timer_Eight"></td>
+        </tr>
+        <tr id="Nine">
+          <th style="color: antiquewhite;" scope="row">9</th>
+          <td style="color: antiquewhite;" id="Question_Nine"></td>
+          <td style="color: antiquewhite;" id="Correct_Nine"></td>
+          <td style="color: antiquewhite;" id="Filled_Nine"></td>
+          <td style="color: antiquewhite;" id="Timer_Nine"></td>
+        </tr>
+        <tr id="Ten">
+          <th style="color: antiquewhite;" scope="row">10</th>
+          <td style="color: antiquewhite;" id="Question_Ten"></td>
+          <td style="color: antiquewhite;" id="Correct_Ten"></td>
+          <td style="color: antiquewhite;" id="Filled_Ten"></td>
+          <td style="color: antiquewhite;" id="Timer_Ten"></td>
+        </tr>
+        <tr id="one_One">
+          <th style="color: antiquewhite;" scope="row">11</th>
+          <td style="color: antiquewhite;" id="Question_one_One"></td>
+          <td style="color: antiquewhite;" id="Correct_one_One"></td>
+          <td style="color: antiquewhite;" id="Filled_one_One"></td>
+          <td style="color: antiquewhite;" id="Timer_one_One"></td>
+        </tr>
+        <tr id="one_Two">
+          <th style="color: antiquewhite;" scope="row">12</th>
+          <td style="color: antiquewhite;" id="Question_one_Two"></td>
+          <td style="color: antiquewhite;" id="Correct_one_Two"></td>
+          <td style="color: antiquewhite;" id="Filled_one_Two"></td>
+          <td style="color: antiquewhite;" id="Timer_one_Two"></td>
+        </tr>
+        <tr id="one_Three">
+          <th style="color: antiquewhite;" scope="row">13</th>
+          <td style="color: antiquewhite;" id="Question_one_Three"></td>
+          <td style="color: antiquewhite;" id="Correct_one_Three"></td>
+          <td style="color: antiquewhite;" id="Filled_one_Three"></td>
+          <td style="color: antiquewhite;" id="Timer_one_Three"></td>
+        </tr>
+        <tr id="one_Four">
+          <th style="color: antiquewhite;" scope="row">14</th>
+          <td style="color: antiquewhite;" id="Question_one_Four"></td>
+          <td style="color: antiquewhite;" id="Correct_one_Four"></td>
+          <td style="color: antiquewhite;" id="Filled_one_Four"></td>
+          <td style="color: antiquewhite;" id="Timer_one_Four"></td>
+        </tr>
+        <tr id="one_Five">
+          <th style="color: antiquewhite;" scope="row">15</th>
+          <td style="color: antiquewhite;" id="Question_one_Five"></td>
+          <td style="color: antiquewhite;" id="Correct_one_Five"></td>
+          <td style="color: antiquewhite;" id="Filled_one_Five"></td>
+          <td style="color: antiquewhite;" id="Timer_one_Five"></td>
+        </tr>
+        <tr id="one_Six">
+          <th style="color: antiquewhite;" scope="row">16</th>
+          <td style="color: antiquewhite;" id="Question_one_Six"></td>
+          <td style="color: antiquewhite;" id="Correct_one_Six"></td>
+          <td style="color: antiquewhite;" id="Filled_one_Six"></td>
+          <td style="color: antiquewhite;" id="Timer_one_Six"></td>
+        </tr>
+        <tr id="one_Seven">
+          <th style="color: antiquewhite;" scope="row">17</th>
+          <td style="color: antiquewhite;" id="Question_one_Seven"></td>
+          <td style="color: antiquewhite;" id="Correct_one_Seven"></td>
+          <td style="color: antiquewhite;" id="Filled_one_Seven"></td>
+          <td style="color: antiquewhite;" id="Timer_one_Seven"></td>
+        </tr>
+        <tr id="one_Eight">
+          <th style="color: antiquewhite;" scope="row">18</th>
+          <td style="color: antiquewhite;" id="Question_one_Eight"></td>
+          <td style="color: antiquewhite;" id="Correct_one_Eight"></td>
+          <td style="color: antiquewhite;" id="Filled_one_Eight"></td>
+          <td style="color: antiquewhite;" id="Timer_one_Eight"></td>
+        </tr>
+        <tr id="one_Nine">
+          <th style="color: antiquewhite;" scope="row">19</th>
+          <td style="color: antiquewhite;" id="Question_one_Nine"></td>
+          <td style="color: antiquewhite;" id="Correct_one_Nine"></td>
+          <td style="color: antiquewhite;" id="Filled_one_Nine"></td>
+          <td style="color: antiquewhite;" id="Timer_one_Nine"></td>
+        </tr>
+        <tr id="two_Zero">
+          <th style="color: antiquewhite;" scope="row">20</th>
+          <td style="color: antiquewhite;" id="Question_two_Zero"></td>
+          <td style="color: antiquewhite;" id="Correct_two_Zero"></td>
+          <td style="color: antiquewhite;" id="Filled_two_Zero"></td>
+          <td style="color: antiquewhite;" id="Timer_two_Zero"></td>
+        </tr>
+        <tr id="two_One">
+          <th style="color: antiquewhite;" scope="row">21</th>
+          <td style="color: antiquewhite;" id="Question_two_One"></td>
+          <td style="color: antiquewhite;" id="Correct_two_One"></td>
+          <td style="color: antiquewhite;" id="Filled_two_One"></td>
+          <td style="color: antiquewhite;" id="Timer_two_One"></td>
+        </tr>
+        <tr id="two_Two">
+          <th style="color: antiquewhite;" scope="row">22</th>
+          <td style="color: antiquewhite;" id="Question_two_Two"></td>
+          <td style="color: antiquewhite;" id="Correct_two_Two"></td>
+          <td style="color: antiquewhite;" id="Filled_two_Two"></td>
+          <td style="color: antiquewhite;" id="Timer_two_Two"></td>
+        </tr>
+        <tr id="two_Three">
+          <th style="color: antiquewhite;" scope="row">23</th>
+          <td style="color: antiquewhite;" id="Question_two_Three"></td>
+          <td style="color: antiquewhite;" id="Correct_two_Three"></td>
+          <td style="color: antiquewhite;" id="Filled_two_Three"></td>
+          <td style="color: antiquewhite;" id="Timer_two_Three"></td>
+        </tr>
+        <tr id="two_Four">
+          <th style="color: antiquewhite;" scope="row">24</th>
+          <td style="color: antiquewhite;" id="Question_two_Four"></td>
+          <td style="color: antiquewhite;" id="Correct_two_Four"></td>
+          <td style="color: antiquewhite;" id="Filled_two_Four"></td>
+          <td style="color: antiquewhite;" id="Timer_two_Four"></td>
+        </tr>
+        <tr id="two_Five">
+          <th style="color: antiquewhite;" scope="row">25</th>
+          <td style="color: antiquewhite;" id="Question_two_Five"></td>
+          <td style="color: antiquewhite;" id="Correct_two_Five"></td>
+          <td style="color: antiquewhite;" id="Filled_two_Five"></td>
+          <td style="color: antiquewhite;" id="Timer_two_Five"></td>
+        </tr>
+        <tr id="two_Six">
+          <th style="color: antiquewhite;" scope="row">26</th>
+          <td style="color: antiquewhite;" id="Question_two_Six"></td>
+          <td style="color: antiquewhite;" id="Correct_two_Six"></td>
+          <td style="color: antiquewhite;" id="Filled_two_Six"></td>
+          <td style="color: antiquewhite;" id="Timer_two_Six"></td>
+        </tr>
+        <tr id="two_Seven">
+          <th style="color: antiquewhite;" scope="row">27</th>
+          <td style="color: antiquewhite;" id="Question_two_Seven"></td>
+          <td style="color: antiquewhite;" id="Correct_two_Seven"></td>
+          <td style="color: antiquewhite;" id="Filled_two_Seven"></td>
+          <td style="color: antiquewhite;" id="Timer_two_Seven"></td>
+        </tr>
+        <tr id="two_Eight">
+          <th style="color: antiquewhite;" scope="row">28</th>
+          <td style="color: antiquewhite;" id="Question_two_Eight"></td>
+          <td style="color: antiquewhite;" id="Correct_two_Eight"></td>
+          <td style="color: antiquewhite;" id="Filled_two_Eight"></td>
+          <td style="color: antiquewhite;" id="Timer_two_Eight"></td>
+        </tr>
+        <tr id="two_Nine">
+          <th style="color: antiquewhite;" scope="row">29</th>
+          <td style="color: antiquewhite;" id="Question_two_Nine"></td>
+          <td style="color: antiquewhite;" id="Correct_two_Nine"></td>
+          <td style="color: antiquewhite;" id="Filled_two_Nine"></td>
+          <td style="color: antiquewhite;" id="Timer_two_Nine"></td>
+        </tr>
+        <tr id="two_Ten">
+          <th style="color: antiquewhite;" scope="row">30</th>
+          <td style="color: antiquewhite;" id="Question_two_Ten"></td>
+          <td style="color: antiquewhite;" id="Correct_two_Ten"></td>
+          <td style="color: antiquewhite;" id="Filled_two_Ten"></td>
+          <td style="color: antiquewhite;" id="Timer_two_Ten"></td>
+        </tr>
+      </table>
+    </center>
+    <script src="scored.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+#op{
+    width: 500px;
+    height: 500px;
+    border: 5px dotted black;
+    vertical-align: middle;
+    background-color: yellowgreen;
+    text-align: center;
+}
