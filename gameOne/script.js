@@ -155,7 +155,7 @@ function submit(){
         }
         var correct_wrong = document.getElementById("correct_wrong")
         correct_wrong.innerHTML = "Correct👍👍"
-        gn()
+        
         var timer_get = localStorage.getItem("timer");
         function funnn(number, code, wrong_correct) {
             if(localStorage.getItem("pt") == number){
@@ -193,6 +193,7 @@ function submit(){
         funnn("28", "two_eight", "Correct");
         funnn("29", "two_nine", "Correct");
         funnn("30", "three_zero", "Correct");
+        gn()
         document.getElementById("typed_number").value = "";
     }
     else{
