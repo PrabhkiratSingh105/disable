@@ -157,42 +157,42 @@ function submit(){
         correct_wrong.innerHTML = "Correct👍👍"
         gn()
         var timer_get = localStorage.getItem("timer");
-        function funn(number, code, wrong_correct) {
+        function funnn(number, code, wrong_correct) {
             if(localStorage.getItem("pt") == number){
-                localStorage.setItem(code, [wrong_correct, document.getElementById("typed_number").value, localStorage.getItem("correct_answer"), localStorage.getItem("show_number"), timer_get]);
+                localStorage.setItem(code, [wrong_correct, document.getElementById("typed_number").value, document.getElementById("typed_number").value, localStorage.getItem("show_number"), timer_get]);
             }
         }
         local()
-        funn("1", "one", "Correct");
-        funn("2", "two", "Correct");
-        funn("3", "three", "Correct");
-        funn("4", "four", "Correct");
-        funn("5", "five", "Correct");
-        funn("6", "six", "Correct");
-        funn("7", "seven", "Correct");
-        funn("8", "eight", "Correct");
-        funn("9", "nine", "Correct");
-        funn("10", "ten", "Correct");
-        funn("11", "eleven", "Correct");
-        funn("12", "one_two", "Correct");
-        funn("13", "one_three", "Correct");
-        funn("14", "one_four", "Correct");
-        funn("15", "one_five", "Correct");
-        funn("16", "one_six", "Correct");
-        funn("17", "one_seven", "Correct");
-        funn("18", "one_eight", "Correct");
-        funn("19", "one_nine", "Correct");
-        funn("20", "two_zero", "Correct");
-        funn("21", "two_one", "Correct");
-        funn("22", "two_two", "Correct");
-        funn("23", "two_three", "Correct");
-        funn("24", "two_four", "Correct");
-        funn("25", "two_five", "Correct");
-        funn("26", "two_six", "Correct");
-        funn("27", "two_seven", "Correct");
-        funn("28", "two_eight", "Correct");
-        funn("29", "two_nine", "Correct");
-        funn("30", "three_zero", "Correct");
+        funnn("1", "one", "Correct");
+        funnn("2", "two", "Correct");
+        funnn("3", "three", "Correct");
+        funnn("4", "four", "Correct");
+        funnn("5", "five", "Correct");
+        funnn("6", "six", "Correct");
+        funnn("7", "seven", "Correct");
+        funnn("8", "eight", "Correct");
+        funnn("9", "nine", "Correct");
+        funnn("10", "ten", "Correct");
+        funnn("11", "eleven", "Correct");
+        funnn("12", "one_two", "Correct");
+        funnn("13", "one_three", "Correct");
+        funnn("14", "one_four", "Correct");
+        funnn("15", "one_five", "Correct");
+        funnn("16", "one_six", "Correct");
+        funnn("17", "one_seven", "Correct");
+        funnn("18", "one_eight", "Correct");
+        funnn("19", "one_nine", "Correct");
+        funnn("20", "two_zero", "Correct");
+        funnn("21", "two_one", "Correct");
+        funnn("22", "two_two", "Correct");
+        funnn("23", "two_three", "Correct");
+        funnn("24", "two_four", "Correct");
+        funnn("25", "two_five", "Correct");
+        funnn("26", "two_six", "Correct");
+        funnn("27", "two_seven", "Correct");
+        funnn("28", "two_eight", "Correct");
+        funnn("29", "two_nine", "Correct");
+        funnn("30", "three_zero", "Correct");
         document.getElementById("typed_number").value = "";
     }
     else{

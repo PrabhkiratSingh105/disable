@@ -5,11 +5,11 @@ function main(code, element){
     document.getElementById("Question_" + element).innerText = first[3];
     document.getElementById("Correct_" + element).innerText = first[2];
     document.getElementById("Filled_" + element).innerText = first[1];
-    if(first[0] == "Wrong"){
-        document.getElementById(element).className = "Wrong";
-    }
     if(first[0] == "Correct"){
         document.getElementById(element).className = "Correct";
+    }
+    if(first[0] == "Wrong"){
+        document.getElementById(element).className = "Wrong";
     }
 }
 function clicked(){
@@ -66,8 +66,13 @@ function downloadCSVFile(csv_data) {
     });
     var temp_link = document.createElement('a');
     var date = new Date();
-    var Time = date.getHours()+ "-" + date.getMinutes()+"-"+date.getSeconds();
-    var ccsv = "Name{" + localStorage.getItem("name") + "} Date{" + date + "}Time {" + Time + "}.csv";
+    var a_date = localStorage.setItem("date",date)
+    a_date=localStorage.getItem("date");
+
+    var dater = a_date.split(" ");
+    var dater = dater[2]+"-"+dater[1]+"-"+dater[3]
+    var Time = date.getHours()+ "h " + date.getMinutes()+"m "+date.getSeconds()+"s";
+    var ccsv = "Name{" + localStorage.getItem("name") + "} Date{" + dater + "} Time{" + Time + "}.csv";
     temp_link.download = ccsv;
     var url = window.URL.createObjectURL(CSVFile);
     temp_link.href = url;
@@ -75,15 +80,4 @@ function downloadCSVFile(csv_data) {
     document.body.appendChild(temp_link);
     temp_link.click();
     document.body.removeChild(temp_link);
-}
-window.onscroll = function() {myFunction()};
-
-var header = document.getElementById("header");
-var sticky = header.offsetTop;
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
 }
