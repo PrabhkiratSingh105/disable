@@ -33,6 +33,7 @@ function remove(){
 if(localStorage.getItem("name") == null){
     var qn = prompt("Enter your name: ");
     localStorage.setItem("name", qn);
+    location.reload();
 }
 var cn =  prompt('How many questions you want to attempt? \nMax 30 questions')
 cn = parseInt(cn)
