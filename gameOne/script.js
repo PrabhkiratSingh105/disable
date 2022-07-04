@@ -1,3 +1,4 @@
+// setInterval(console.clear(),5000);
 function remove(){
     localStorage.removeItem("one");
     localStorage.removeItem("two");
@@ -33,11 +34,17 @@ function remove(){
 if(localStorage.getItem("name") == null){
     var qn = prompt("Enter your name: ");
     localStorage.setItem("name", qn);
-    location.reload();
 }
 var cn =  prompt('How many questions you want to attempt? \nMax 30 questions')
 cn = parseInt(cn)
 sessionStorage.setItem("quantity", cn++);
+if(localStorage.getItem("range")==null){
+    var range = prompt("Enter range\nEg:- 10,15")
+    range=range.split(",")
+    localStorage.setItem("range", range);
+    localStorage.setItem("range_1", range[0]);
+    localStorage.setItem("range_2", range[1]);
+}
 // ep
 remove()
 localStorage.setItem("score", "0");
@@ -47,29 +54,45 @@ var ep = localStorage.getItem("ep");
 sessionStorage.setItem("timer", "true");
 sessionStorage.setItem("timer_reset", "false"); 
 
-var tn = document.getElementById("typed_number");
+var tn = document.querySelector("body");
 tn.addEventListener("keypress", function(event){
-    console.log(event.keyCode)
+    textbox=document.getElementById("typed_number").value
     if(event.keyCode == 13){
-        console.log("yo")
         submit()
     }
 });
 function timer() {
     if(sessionStorage.getItem("timer") == "true"){
         var timer = 0;
-        setTimeout(
-            setInterval(
-                function() {
-                    if(sessionStorage.getItem("timer_reset") == "true"){
-                        timer = 0;
+        setInterval(
+            function() {
+                if(sessionStorage.getItem("timer_reset") == "true"){
+                    timer = 0;
+                }
+                sessionStorage.setItem("timer_reset", "false");
+                timer++;
+                setInterval(function(){
+                    msec=localStorage.getItem("msec")
+                    if(msec==null || msec=="null"){
+                        localStorage.setItem("msec","0")
+                        msec="0"
                     }
-                    sessionStorage.setItem("timer_reset", "false");
-                    timer++;
-                    document.getElementById("timer").innerText = timer + "s";
-                    localStorage.setItem("timer", timer);
-                }, 1000
-            ), 5000
+                    else{
+                        msec=parseInt(msec)
+                        msec++
+                        msec=msec.toString()
+                        msec=msec.split("")
+                        msec=msec[0]
+                        localStorage.setItem("msec",msec)
+                        // msec=msec.toString()
+                        msec="."+msec+"s"
+                        localStorage.setItem("msec_use",msec)
+                        document.getElementById("timer").innerText = timer + localStorage.getItem("msec_use");
+                        timer=timer.toString();
+                        localStorage.setItem("timer", timer+localStorage.getItem("msec_use"));
+                    }
+                },100)
+            }, 1000
         )
     }
 }
@@ -88,20 +111,24 @@ if(high_score == null){
 }
 show_high_score.innerHTML = "High score: " + high_score
 function gn(){
+    var range_1=localStorage.getItem("range_1")
+    range_1=parseInt(range_1)
+    var range_2=localStorage.getItem("range_2")
+    range_2=parseInt(range_2)
     var first_number = Math.random()
-    var first_number = first_number * 21
+    var first_number = first_number * range_1
     var first_number = parseInt(first_number)
     if(first_number == 0 || first_number == 1){
         var first_number = Math.random()
-        var first_number = first_number * 21
+        var first_number = first_number * range_1
         var first_number = parseInt(first_number)
     }
     var second_number = Math.random()
-    var second_number = second_number * 21
+    var second_number = second_number * range_2
     var second_number = parseInt(second_number)
     if(second_number == 0 || second_number == 1){
         var second_number = Math.random()
-        var second_number = second_number * 21
+        var second_number = second_number * range_2
         var second_number = parseInt(second_number)
     }
     var correct_answer = first_number * second_number

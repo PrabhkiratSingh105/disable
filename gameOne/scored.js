@@ -1,7 +1,18 @@
+function namme(){
+    var pro=prompt("Enter your name")
+    localStorage.setItem("name",pro);
+}
+function range(){
+    var range = prompt("Enter range\nEg:- 10,15")
+    range=range.split(",")
+    localStorage.setItem("range", range);
+    localStorage.setItem("range_1", range[0]);
+    localStorage.setItem("range_2", range[1]);
+}
 function main(code, element){
     var first = localStorage.getItem(code);
     first = first.split(",");
-    document.getElementById("Timer_" + element).innerText = first[4] + "s";
+    document.getElementById("Timer_" + element).innerText = first[4];
     document.getElementById("Question_" + element).innerText = first[3];
     document.getElementById("Correct_" + element).innerText = first[2];
     document.getElementById("Filled_" + element).innerText = first[1];
