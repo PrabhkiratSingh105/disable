@@ -1,4 +1,4 @@
-// setInterval(console.clear(),5000);
+alert("Get ready!");
 function remove(){
     localStorage.removeItem("one");
     localStorage.removeItem("two");
@@ -35,102 +35,26 @@ if(localStorage.getItem("name") == null){
     var qn = prompt("Enter your name: ");
     localStorage.setItem("name", qn);
 }
-var cn =  prompt('How many questions you want to attempt? \nMax 30 questions')
-cn = parseInt(cn)
-sessionStorage.setItem("quantity", cn++);
+// var cn =  prompt('How many questions you want to attempt? \nMax 30 questions')
+// cn = parseInt(cn)
+// localStorage.setItem("quantity", cn++);
 if(localStorage.getItem("range")==null){
-    var range = prompt("Enter range\nEg:- 10,15")
-    range=range.split(",")
+    // var range = prompt("Enter range\nEg:- 10,15")
+    // range=range.split(",")
     localStorage.setItem("range", range);
     localStorage.setItem("range_1", range[0]);
     localStorage.setItem("range_2", range[1]);
 }
-// ep
 remove()
-localStorage.setItem("score", "0");
-document.getElementById("score").innerText = "Score: 0";
 localStorage.setItem("pt", "0");
-var ep = localStorage.getItem("ep");
-sessionStorage.setItem("timer", "true");
-sessionStorage.setItem("timer_reset", "false"); 
-
-var tn = document.querySelector("body");
-tn.addEventListener("keypress", function(event){
-    textbox=document.getElementById("typed_number").value
-    if(event.keyCode == 13){
-        submit()
-    }
-});
-function timer() {
-    if(sessionStorage.getItem("timer") == "true"){
-        var timer = 0;
-        setInterval(
-            function() {
-                if(sessionStorage.getItem("timer_reset") == "true"){
-                    timer = 0;
-                }
-                sessionStorage.setItem("timer_reset", "false");
-                timer++;
-                setInterval(function(){
-                    msec=localStorage.getItem("msec")
-                    if(msec==null || msec=="null"){
-                        localStorage.setItem("msec","0")
-                        msec="0"
-                    }
-                    else{
-                        msec=parseInt(msec)
-                        msec++
-                        msec=msec.toString()
-                        msec=msec.split("")
-                        msec=msec[0]
-                        localStorage.setItem("msec",msec)
-                        // msec=msec.toString()
-                        msec="."+msec+"s"
-                        localStorage.setItem("msec_use",msec)
-                        document.getElementById("timer").innerText = timer + localStorage.getItem("msec_use");
-                        timer=timer.toString();
-                        localStorage.setItem("timer", timer+localStorage.getItem("msec_use"));
-                    }
-                },100)
-            }, 1000
-        )
-    }
-}
-timer()
-var high_score = localStorage.getItem("high_score")
-var score = document.getElementById("score")
-var score_local = localStorage.getItem("score")
-if(score_local == "NaN"){
-    score_local = "0"
-    localStorage.setItem("score", "0")
-}
-score.innerHTML = "Score: " + score_local
-var show_high_score = document.getElementById("high_score")
-if(high_score == null){
-    high_score = "0"
-}
-show_high_score.innerHTML = "High score: " + high_score
+localStorage.setItem("timer", "true");
+localStorage.setItem("timer_reset", "false"); 
+time()
 function gn(){
-    var range_1=localStorage.getItem("range_1")
-    range_1=parseInt(range_1)
-    var range_2=localStorage.getItem("range_2")
-    range_2=parseInt(range_2)
-    var first_number = Math.random()
-    var first_number = first_number * range_1
-    var first_number = parseInt(first_number)
-    if(first_number == 0 || first_number == 1){
-        var first_number = Math.random()
-        var first_number = first_number * range_1
-        var first_number = parseInt(first_number)
-    }
-    var second_number = Math.random()
-    var second_number = second_number * range_2
-    var second_number = parseInt(second_number)
-    if(second_number == 0 || second_number == 1){
-        var second_number = Math.random()
-        var second_number = second_number * range_2
-        var second_number = parseInt(second_number)
-    }
+    var random_1=random(Int(localStorage.getItem("range_1")),Int(localStorage.getItem("range_2")));
+    var random_2=random(Int(localStorage.getItem("range_1")),Int(localStorage.getItem("range_2")));
+    first_number=random_1
+    second_number=random_2
     var correct_answer = first_number * second_number
     localStorage.setItem("correct_answer", correct_answer)
     var first_number = first_number.toString()
@@ -140,50 +64,17 @@ function gn(){
     var show = document.getElementById("show")
     show.innerHTML = show_number
 }
-
 gn()
 var show_number = localStorage.getItem("show_number")
 var show = document.getElementById("show")
 show.innerHTML = show_number
-
 function submit(){
-    sessionStorage.setItem("timer_reset", "true");
+    localStorage.setItem("timer_reset", "true");
     var typed_number = document.getElementById("typed_number").value
     var typed_number = parseInt(typed_number)
     var correct_answer = localStorage.getItem("correct_answer")
     correct_answer = parseInt(correct_answer)
     if(typed_number == correct_answer){
-        var score = localStorage.getItem("score")
-        var score = parseInt(score)
-        score++
-        localStorage.setItem("score", score)
-        ep = localStorage.getItem("ep")
-        var ep = parseInt(ep)
-        ep++
-        ep++
-        ep++
-        localStorage.setItem("ep", ep)
-        score = score.toString()
-        score_div_set = document.getElementById("score")
-        score_div_set.innerHTML = "Score: " + score
-        var high_score = localStorage.getItem("high_score")
-        if(high_score == null){
-            localStorage.setItem("high_score", 0)
-            high_score_set = document.getElementById("high_score")
-            high_score_set.innerHTML = "High score: " + high_score
-        }
-        var high_score = localStorage.getItem("high_score")
-        var high_score = parseInt(high_score)
-        if(score > high_score){
-            high_score = score
-            localStorage.setItem("high_score", score)
-            high_score = high_score.toString()
-            high_score_set = document.getElementById("high_score")
-            high_score_set.innerHTML = "High score: " + high_score
-        }
-        var correct_wrong = document.getElementById("correct_wrong")
-        correct_wrong.innerHTML = "Correct👍👍"
-        
         var timer_get = localStorage.getItem("timer");
         function funnn(number, code, wrong_correct) {
             if(localStorage.getItem("pt") == number){
@@ -277,7 +168,7 @@ function submit(){
     }
 }
 function local(){
-    var quan = sessionStorage.getItem("quantity");
+    var quan = localStorage.getItem("quantity");
     quan = parseInt(quan)
     var pt = localStorage.getItem("pt");
     pt = parseInt(pt);
@@ -289,5 +180,129 @@ function local(){
     if(pt == quan){
         open("scored.html");
         setTimeout(window.close(), 15000)
+    }
+}
+
+
+//language
+function random(value_one, value_two){
+    value_one = parseInt(value_one)
+    value_two = parseInt(value_two)
+    value_two = value_two++
+    var va = Math.random() * value_two;
+    while(va < value_one){
+        var va = Math.random() * value_two;
+    }
+    va = parseInt(va)
+    return va;
+}
+function Int(number){
+    return parseInt(number)
+}
+function hour(){
+    var date = new Date();
+    var hour = date.getHours();
+    return hour
+}
+function min(){
+    var date = new Date();
+    var min = date.getMinutes();
+    return min
+}
+function sec(){
+    var date = new Date();
+    var sec = date.getSeconds();
+    return sec
+}
+function date(){
+    var date = new Date();
+    return date
+}
+
+//Keys
+var tn = document.querySelector("html");
+tn.addEventListener("keyup", function(e){
+    console.log(e.keyCode)
+    if(e.keyCode==8){
+        textbox=document.getElementById("typed_number").value
+        textbox=textbox.toString()
+        textbox=textbox.slice(0,-1)
+        document.getElementById("typed_number").value=textbox
+    }
+})
+tn.addEventListener("keypress", function(event){
+    textbox=document.getElementById("typed_number").value
+    console.log(event.keyCode)
+    if(event.keyCode == 13){
+        submit()
+    }
+    if(event.keyCode == 49){
+        document.getElementById("typed_number").value+=1;
+    }
+    if(event.keyCode == 50){
+        document.getElementById("typed_number").value+=2;
+    }
+    if(event.keyCode == 51){
+        document.getElementById("typed_number").value+=3;
+    }
+    if(event.keyCode == 52){
+        document.getElementById("typed_number").value+=4;
+    }
+    if(event.keyCode == 53){
+        document.getElementById("typed_number").value+=5;
+    }
+    if(event.keyCode == 54){
+        document.getElementById("typed_number").value+=6;
+    }
+    if(event.keyCode == 55){
+        document.getElementById("typed_number").value+=7;
+    }
+    if(event.keyCode == 56){
+        document.getElementById("typed_number").value+=8;
+    }
+    if(event.keyCode == 57){
+        document.getElementById("typed_number").value+=9;
+    }
+    if(event.keyCode == 48){
+        document.getElementById("typed_number").value+=0;
+    }
+});
+function time() {
+    setTimeout(timer(), 6000);
+}
+//Timer
+function timer() {
+    if(localStorage.getItem("timer") == "true"){
+        var timer = 0;
+        setInterval(
+            function() {
+                if(localStorage.getItem("timer_reset") == "true"){
+                    timer = 0;
+                }
+                localStorage.setItem("timer_reset", "false");
+                timer++;
+                setInterval(function(){
+                    msec=localStorage.getItem("msec")
+                    if(msec==null || msec=="null"){
+                        localStorage.setItem("msec","0")
+                        msec="0"
+                    }
+                    else{
+                        msec=parseInt(msec)
+                        msec++
+                        msec=msec.toString()
+                        msec=msec.split("")
+                        msec=msec[0]
+                        localStorage.setItem("msec",msec)
+                        // msec=msec.toString()
+                        msec="."+msec+"s"
+                        localStorage.setItem("msec_use",msec)
+                        document.getElementById("timer").innerText = timer + localStorage.getItem("msec_use");
+                        timer=timer.toString();
+                        localStorage.setItem("timer", timer+localStorage.getItem("msec_use"));
+                    }
+                },100)
+            }, 1000
+        )
     }
 }

@@ -1,14 +1,3 @@
-function namme(){
-    var pro=prompt("Enter your name")
-    localStorage.setItem("name",pro);
-}
-function range(){
-    var range = prompt("Enter range\nEg:- 10,15")
-    range=range.split(",")
-    localStorage.setItem("range", range);
-    localStorage.setItem("range_1", range[0]);
-    localStorage.setItem("range_2", range[1]);
-}
 function main(code, element){
     var first = localStorage.getItem(code);
     first = first.split(",");
@@ -24,7 +13,7 @@ function main(code, element){
     }
 }
 function clicked(){
-    open("index.html");
+    open("main.html");
     window.close();
 }
 main("one", "One");
