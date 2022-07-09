@@ -38,13 +38,13 @@ if(localStorage.getItem("name") == null){
 // var cn =  prompt('How many questions you want to attempt? \nMax 30 questions')
 // cn = parseInt(cn)
 // localStorage.setItem("quantity", cn++);
-if(localStorage.getItem("range")==null){
+// if(localStorage.getItem("range")==null){
     // var range = prompt("Enter range\nEg:- 10,15")
     // range=range.split(",")
-    localStorage.setItem("range", range);
-    localStorage.setItem("range_1", range[0]);
-    localStorage.setItem("range_2", range[1]);
-}
+    // localStorage.setItem("range", range);
+    // localStorage.setItem("range_1", range[0]);
+    // localStorage.setItem("range_2", range[1]);
+// }
 remove()
 localStorage.setItem("pt", "0");
 localStorage.setItem("timer", "true");
