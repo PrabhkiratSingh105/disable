@@ -24,12 +24,7 @@ if(quan==null||quan=="null"){
     document.getElementById("questions").value="";
 }
 else{
-    document.getElementById("questions").value=""+quan;
-}
-setInterval(function(){ra()},1000);
-function ra(){
-    document.getElementById("ra_1").innerText=document.getElementById("range_one").value
-    document.getElementById("ra_2").innerText=document.getElementById("range_two").value
+    document.getElementById("questions").value=""+parseInt(quan);
 }
 document.getElementById("button").onclick=function(){
     run()
@@ -40,6 +35,8 @@ function run(){
     localStorage.setItem("range_2",document.getElementById("range_two").value)
     localStorage.setItem("quantity",document.getElementById("questions").value)
     if(document.getElementById("range_one").value==""||document.getElementById("range_two").value==""||document.getElementById("questions").value==""||document.getElementById("name").value=="") return  alert("Form in not fully filled");
+    if(parseInt(document.getElementById("questions").value)<1){return alert("questions can't be less than 1 ")}
+    if(parseInt(document.getElementById("questions").value)>31){return alert("question range max 30 ")}
     open("index.html")
     window.close()
 }
