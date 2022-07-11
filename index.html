@@ -1,133 +1,80 @@
-<!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Login\Signup</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="bootstrap.css">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4540405112656122" crossorigin="anonymous"></script>
-  <link href="https://vjs.zencdn.net/7.19.2/video-js.css" rel="stylesheet" />
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4540405112656122"
-     crossorigin="anonymous"></script>
-
-</head>
-
-<body class="body">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4540405112656122"
-     crossorigin="anonymous"></script>
-<!-- Prabhkirat-tech -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-4540405112656122"
-     data-ad-slot="8341933333"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-  <style>
-    body {
-      margin: 1%;
-      background-image: url("images/login-signup-background-image.jpg");
-    }
-    .su {
-      width: 370px;
-      background-color: #C0C0C0;
-      border-radius: 5%;
-      position: absolute;
-      right: 1%;
-      border: blue dotted;
-    }
-    #li {
-      float: right;
-      position: absolute;
-      top: 380px;
-      right: 1%;
-    }
-    #su {
-      float: right;
-			top: 1%;
-    }
-    #cp {
-      float: left;
-      position: absolute;
-      left: 1%;
-      top: 1%;
-    }
-  </style>
-  <div class="su" id="su">
-    <h1>
-      <center>Sign Up</center>
-    </h1>
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Username</label>
-      <input type="email" class="form-control" id="un" aria-describedby="emailHelp">
-    </div>
-
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="pass">
-    </div>
-
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Repeat Password</label>
-      <input type="password" class="form-control" id="cpass">
-    </div>
-		
-    <center><button type="submit" class="btn btn-primary" onclick="submit()">Sign up</button>
-    </center>
-  </div><br>
-  <div class="su" id="cp">
-    <h1>
-      <center>Change Password</center>
-    </h1>
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Username</label>
-      <input type="email" class="form-control" id="cpun" aria-describedby="emailHelp">
-    </div>
-
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Current Password</label>
-      <input type="password" class="form-control" id="cpcp">
-    </div>
-
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">New Password</label>
-      <input type="password" class="form-control" id="cpnp">
-    </div>
-
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Repeat Password</label>
-      <input type="password" class="form-control" id="cprp">
-    </div>
-
-
-    <center><button type="submit" class="btn btn-primary" onclick="cp()">Change password</button><br>  <button type="submit"
-        class="btn btn-primary" onclick="cu()">Change username?</button> <button type="submit" class="btn btn-primary"
-        onclick="ra()">Reset account?</button>
-    </center>
-  </div><br>
-
-  <div class="su" id="li">
-    <h1>
-      <center>Log in</center>
-    </h1>
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Username</label>
-      <input type="email" class="form-control" id="cusername" aria-describedby="emailHelp">
-    </div>
-
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="opass">
-    </div>
-		
-    <center><button class="btn btn-primary" id="login" onclick="login()">Log in</button> <button class="btn btn-primary" id="Ak" onclick="akey()">Advanced Key</button>
-    </center>
-  </div>
-  <script src="script.js"></script>
-</body>
-
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="header.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    </head>
+    <body>
+        <header>
+            <ul class="header">
+                <li class="header_other home">
+                    Home
+                </li>
+                <li class="header_other">
+                    GrowYT
+                </li>
+                <li class="header_other">
+                    Learning
+                </li>
+                <li class="header_other">
+                    Downloads
+                </li>
+            </ul>
+        </header>
+        <img class="mimage" src="banner.png" alt="">
+        <center>
+            <div class="content">
+                <div class="subscribers content--" onclick="subs();">
+                    <img class="subs_image" src="s_image/subscribe.png" alt="">
+                    <span class="counter-text">Subscribers</span>
+                    <span class="counter-count">35+</span>
+                </div>
+                <div class="likes content--" onclick="other()">
+                    <img class="like_image" src="s_image/like.png" alt="">
+                    <span class="counter-text">Likes</span>
+                    <span class="counter-count">100+</span>
+                </div>
+                <div class="views content--" onclick="other()">
+                    <img src="s_image/view.png" alt="">
+                    <span class="counter-text">Views</span>
+                    <span class="counter-count">1k+</span>
+                </div>
+            </div>
+        </center>
+        <img class="image" src="banner.png" alt="">
+        <section class="grow_yt">
+            <div class="text-yt">
+                <div class="heading">Grow YouTube</div>
+                <p class="gyt">
+                    There are billions of YouTube channels in the world but only millions of YouTube channels are famous.
+                    How can you famous your YouTube channel? there are many ways to famous YouTube
+                    channel. You will get to know how you can famous your YouTube channel.
+                    In GrowYT, you will learn how to grow YouTube channels (chapter wise)
+                    and the best thing is everything in this website is 100% free of cost
+                    you just have to pay your time. 
+                </p>
+                <center><button class="gyt--"><b>GrowYT</b></button></center>
+            </div>
+            <div class="image-yt">
+                <img class="image-yt-yt" src="Grow YouTube.png" alt="">
+            </div>
+        </section>
+        <section class="grow_yt">
+            <div class="image-download">
+                <img class="learning-image" src="learning.png" alt="">
+            </div>
+            <div class="text-download">
+        
+            </div>
+        </section>
+    </body>
 </html>

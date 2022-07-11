@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&display=swap" rel="stylesheet">
+        <style>
+            * {
+                cursor: pointer;
+            }
+            body {
+                margin: 0;
+                overflow: hidden;
+            }
+            .cer {
+                width: 100%;
+                height: 100%;
+            }
+            .name {
+                font-family: 'Edu VIC WA NT Beginner', cursive;
+                position: absolute;
+                top: 37%;
+                font-size: 50px;
+                width: 100%;
+                text-align: center;
+            }
+            .pos {
+                width: 100%;
+                text-align: center;
+            }
+        </style>
+        <script>
+            // Define the function 
+            // to screenshot the div
+            function takeshot() {
+                let div =
+                    document.getElementById('photo');
+            
+                // Use the html2canvas
+                // function to take a screenshot
+                // and append it
+                // to the output div
+                html2canvas(div).then(
+                    function (canvas) {
+                        document
+                        .getElementById('output')
+                        .appendChild(canvas);
+                    })
+            }
+            var canvas = document.getElementById('canvas');
+            var ctx = canvas.getContext("2d");
+            let img = new Image("certicate.png");
+            img.addEventListener("load", ()=>{
+              ctx.drawImage(img,0,0);
+              ctx.font = '50px serif';
+              ctx.fillText(localStorage.getItem('name'), 50, 90);
+            });
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
+    </head>
+    <body id="photo" onclick="takeshot();">
+        <canvas id="canvas" width="100%" height="100%"></canvas>
+        <div class="output">
+        <!-- <img class="cer" src="certicate.png" alt=""> -->
+        <!-- <center><div class="name"><div class="pos">Prabhkirat Singh</div></div></center> -->
+        </div>
+    </body>
+</html>

@@ -1,95 +1,53 @@
-#show{
-    margin: 20px;
-    color: azure;
-    font-size: 10vw;
-    text-align: center;
-}
-.header{
-    background-color: azure;
-    width: 100%;
-}
-button{
-    float: left;
-}
-#correct_wrong{
-    position: absolute;
-    bottom: -900000000000px;
-}
-body{
-    background-color: rgb(63, 60, 60);
-    overflow: hidden;
-    overflow-x: hidden;
-    margin: 20px;
-}
-.tp{
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    text-align: center;
-    height: 50px;
-    font-size: 50px;
-}
-#check{
-    margin-top: 1%;
-    background-color: blue;
-    color: antiquewhite;
-    width: 100px;
-    height: 50px;
-    font-size: 32px;
-    /* border: 2px whitesmoke;script.js */
-    border: 1px solid black;
-    border-radius: 5%;
-}
-#score{
-    position: relative;
-    float: right;
-    text-align: right;
-    font-size: 50px;
-    color: red;
-    /* bottom: 2px; */
-    bottom: -2000px;
-    margin-top: 20%;
-}
-#high_score{
-    position:absolute;
-    float: left;
-    text-align: left;
-    font-size: 50px;
-    color: red;
-    bottom: -2000px;
-    margin-top: 20%;
-}
-#correct_wrong{
-    position: absolute;
-    text-align: center;
-    left: 0;
-    right: 0;
-    color: red;
-    font-size: 50px;
-    margin: 2px;
-}
-#timer{
-    position: absolute;
-    left: 49.5vw;
-    top: 60%;
-    color: greenyellow;
-}
-form{
-    text-align: center;
-    color: aquamarine;
+body {
+    margin: 0;
+    background-color: aquamarine;
 }
 
-#timer{
-    text-align: right;
+#show {
+    color: blueviolet;
+    font-size: 12vw;
+    text-align: center;
+    font-family: 'Arima', cursive;
+}
+
+.tp {
+    width: 85%;
+    height: 3vw;
+    text-align: center;
+    font-size: 2vw;
+}
+
+#score {
+    font-size: 0;
+}
+
+#correct_wrong {
+    font-size: 0;
+}
+
+#high_score {
+    font-size: 0;
+}
+
+#check {
+    background-color: darkviolet;
+    font-size: 35px;
+    text-align: center;
+    vertical-align: middle;
+    color: whitesmoke;
+    width: 125px;
+    height: 50px;
+    cursor: pointer;
+}
+
+#check:hover {
+    background-color: whitesmoke;
+    color: darkviolet;
+}
+
+#timer {
+    color: red;
     position: absolute;
-    top: 2vw;
-    right: 2vw;
-}
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-input[type=number] {
-  -moz-appearance: textfield;
+    right: 1%;
+    top: 1%;
 }
